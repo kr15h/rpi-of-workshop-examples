@@ -1,9 +1,9 @@
-#ifndef H_MY_APP
-#define H_MY_APP
+#ifndef H_BLANK_APP
+#define H_BLANK_APP
 
 #include "ofMain.h"
 
-class myApp : public ofBaseApp
+class blankApp : public ofBaseApp
 {
 public:
 	void setup();
