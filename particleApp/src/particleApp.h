@@ -1,10 +1,11 @@
-#pragma once
+#ifndef H_PARTICLE_APP
+#define H_PARTICLE_APP
 
 #include "ofMain.h"
 #include "myParticle.h"
 #include "ofxMidi.h"
 
-class testApp : public ofBaseApp, public ofxMidiListener
+class particleApp : public ofBaseApp, public ofxMidiListener
 {
 public:
 	void setup();
@@ -23,3 +24,5 @@ public:
 	ofxMidiMessage midiMessage;
 	string controllerName;
 };
+
+#endif

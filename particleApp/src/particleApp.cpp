@@ -1,7 +1,7 @@
-#include "testApp.h"
+#include "particleApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup()
+void particleApp::setup()
 {
     numParticles = 100;
     speedMult = ofPoint(1.0f,1.0f,1.0f);
@@ -39,7 +39,7 @@ void testApp::setup()
 }
 
 //--------------------------------------------------------------
-void testApp::update()
+void particleApp::update()
 {
     for ( int i = 0; i < numParticles; i++ ) {
         particles[i].position += particles[i].speed * speedMult;
@@ -86,7 +86,7 @@ void testApp::update()
 }
 
 //--------------------------------------------------------------
-void testApp::draw()
+void particleApp::draw()
 {
     ofBackground(0, 0, 0);
     
@@ -95,13 +95,13 @@ void testApp::draw()
     }
 }
 
-void testApp::newMidiMessage(ofxMidiMessage& msg)
+void particleApp::newMidiMessage(ofxMidiMessage& msg)
 {
     midiMessage = msg;
 }
 
 // automatically check if the MIDI controller is connected or not
-void testApp::checkController()
+void particleApp::checkController()
 {
     if ( controllerFound == false ) {
         if ( midiIn.getNumPorts() > 0 ) {
