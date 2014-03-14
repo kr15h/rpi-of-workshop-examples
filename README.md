@@ -1,4 +1,4 @@
-rpi-of-workshop-examples
-========================
+Raspberry Pi + openFrameworks Workshop Examples
+===============================================
 
-Collection of examples used in Raspberry Pi + openFrameworks workshops
+Collection of examples used in Raspberry Pi + openFrameworks workshops.
