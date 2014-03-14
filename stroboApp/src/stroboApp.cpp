@@ -1,7 +1,6 @@
-#include "testApp.h"
+#include "stroboApp.h"
 
-//--------------------------------------------------------------
-void testApp::setup()
+void stroboApp::setup()
 {
     ofSetFrameRate(60);
     
@@ -32,8 +31,7 @@ void testApp::setup()
     }
 }
 
-//--------------------------------------------------------------
-void testApp::update()
+void stroboApp::update()
 {
     if ( midiMessage.control == 1 ) {
         freq = midiMessage.value / 127.0f * freqMax;
@@ -58,8 +56,7 @@ void testApp::update()
     checkController();
 }
 
-//--------------------------------------------------------------
-void testApp::draw()
+void stroboApp::draw()
 {
     ofBackground(0, 0, 0);
     
@@ -72,18 +69,17 @@ void testApp::draw()
     ofRect((ofGetWidth()-size.x)/2.0f, (ofGetHeight()-size.y)/2.0f, size.x, size.y);
 }
 
-void testApp::triggerStrobe()
+void stroboApp::triggerStrobe()
 {
     lightOn = !lightOn;
 }
 
-void testApp::newMidiMessage(ofxMidiMessage& msg)
+void stroboApp::newMidiMessage(ofxMidiMessage& msg)
 {
     midiMessage = msg;
 }
 
-// automatically check if the MIDI controller is connected or not
-void testApp::checkController()
+void stroboApp::checkController()
 {
     if ( controllerFound == false ) {
         if ( midiIn.getNumPorts() > 0 ) {
@@ -112,50 +108,4 @@ void testApp::checkController()
             controllerFound = false;
         }
     }
-}
-
-//--------------------------------------------------------------
-void testApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void testApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button)
-{
-    
-}
-
-//--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
-
 }
