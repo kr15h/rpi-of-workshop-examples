@@ -1,1 +1,5 @@
 .DS_Store
+*.xcodeproj
+*.plist
+*.xcconfig
+letterApp/bin/letterAppDebug*
