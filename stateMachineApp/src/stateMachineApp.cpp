@@ -1,8 +1,16 @@
 #include "stateMachineApp.h"
+#include "mainState.h"
 
 void stateMachineApp::setup()
 {
+    // Setup state machine shared data.
+    stateMachine.getSharedData().variable = 0;
     
+    // Add states to the state machine.
+    stateMachine.addState<mainState>();
+    
+    // Set default state.
+    stateMachine.changeState("mainState");
 }
 
 void stateMachineApp::update()

@@ -2,6 +2,8 @@
 #define H_STATE_MACHINE_APP
 
 #include "ofMain.h"
+#include "ofxStateMachine.h"
+#include "sharedData.h"
 
 class stateMachineApp : public ofBaseApp
 {
@@ -12,6 +14,8 @@ public:
     void keyPressed( int key );
     void mousePressed( int x, int y, int button );
     
+    // Declare our state machine object
+    itg::ofxStateMachine<sharedData> stateMachine;
 };
 
 #endif
