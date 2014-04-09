@@ -4,3 +4,4 @@
 *.xcconfig
 letterApp/bin/letterApp*
 tweenApp/bin/tweenApp*
+stateMachineApp/bin/stateMachineAppDebug*
