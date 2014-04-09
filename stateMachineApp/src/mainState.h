@@ -2,7 +2,7 @@
 #define H_MAIN_STATE
 
 #include "ofxState.h"
-#include "SharedData.h"
+#include "sharedData.h"
 
 class mainState : public itg::ofxState<sharedData>
 {

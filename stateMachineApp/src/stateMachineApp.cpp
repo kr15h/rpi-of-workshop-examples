@@ -1,5 +1,9 @@
 #include "stateMachineApp.h"
+
+// Include states.
 #include "mainState.h"
+#include "secondState.h"
+#include "thirdState.h"
 
 void stateMachineApp::setup()
 {
@@ -8,6 +12,8 @@ void stateMachineApp::setup()
     
     // Add states to the state machine.
     stateMachine.addState<mainState>();
+    stateMachine.addState<secondState>();
+    stateMachine.addState<thirdState>();
     
     // Set default state.
     stateMachine.changeState("mainState");
@@ -27,6 +33,14 @@ void stateMachineApp::keyPressed( int key )
 {
     char keyChar = key;
     cout << "Key pressed: " << keyChar << endl;
+    
+    if ( key == '1' ) {
+        stateMachine.changeState("mainState");
+    } else if ( key == '2' ) {
+        stateMachine.changeState("secondState");
+    } else if ( key == '3' ) {
+        stateMachine.changeState("thirdState");
+    }
 }
 
 void stateMachineApp::mousePressed( int x, int y, int button )
